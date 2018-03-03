@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Play'), local('Play-Regular'),
+       url('../fonts/play-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/play-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+canvas, div {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+canvas {
+    position:absolute;
+    border: 10px black;
+    margin-left:-512px; /* -1/2 width */
+    margin-top:-384px; /* -1/2 height */
+}
+
+body {
+    height: 100%;
+    font-family: Play,sans-serif;
+}
+
+#canvas1 {
+    margin: 0 0;
+    z-index: -1;
+}
+
+.center {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:20px;
+    height:20px; 
+}
+
+button {
+    font-family: Play,sans-serif;
+    font-weight: 700;
+    margin-left: 2px;
+    border-radius: 6px;
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.playGame {
+    background-color:   #B22222;
+    border: 1px solid black; /* Green border */
+}
+
+.playGame button:hover {
+    background-color: #3e8e41;
+}
+
+.difficulty {
+    margin-top: 25px;
+}
+
+.difficulty button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+}
+
+/* Clear floats (clearfix hack) */
+.difficulty:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.difficulty button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.difficulty button:hover:enabled {
+    background-color: #3e8e41;
+}
